@@ -1,5 +1,4 @@
 /// <reference types="cypress" />
-import usuariosSchema from '../contracts/usuarios.contract';
 import contrato from '../contracts/usuarios.contract'
 describe('Testes da Funcionalidade Usuários', () => {
 
@@ -25,7 +24,7 @@ describe('Testes da Funcionalidade Usuários', () => {
       url: 'usuarios',
       body: {
           "nome": 'Fulano da silva',
-          "email": 'beltrano01@qa.com.br',
+          "email": 'beltrano0@qa.com.br',
           "password": 'teste',
           "administrador": 'true'
       }
