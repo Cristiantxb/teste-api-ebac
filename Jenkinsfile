@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    
+
     stages {
         stage('Clonar o repositório') {
             steps {
@@ -9,12 +9,12 @@ pipeline {
         }
         stage('Instalar dependências') {
             steps {
-                sh 'npm install' 
+                bat 'npm install' 
             }
         }
         stage('Executar Testes') {
             steps {
-                sh 'npm run cy: run'
+                bat 'npm run cy: run'
             }
         }
     }
