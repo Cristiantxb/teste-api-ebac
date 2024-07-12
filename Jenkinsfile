@@ -11,7 +11,7 @@ pipeline {
         stage('Instalar dependências e Executar testes') {
             steps {
                 // Navega para o diretório correto no Windows
-                dir('Exercicio 12/testes-e2e-ebac-shop') {
+                dir('C:\repositorio\teste-api-ebac') {
                     // Instala as dependências
                     bat 'npm install'
 
