@@ -1,8 +1,6 @@
 pipeline {
     agent any
-enviroment {
-    PATH = "/Users/crist/nvm/versions/node/v20.14.0.0/bin:$PATH"
-}
+    
     stages {
         stage('Clonar o repositório') {
             steps {
