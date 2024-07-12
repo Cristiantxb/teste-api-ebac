@@ -1,32 +1,24 @@
 pipeline {
     agent any
 
-
     stages {
-        stage('Clonar o repositório') {
+        stage('Clonar repositório') {
             steps {
                 git branch: 'main', url: 'https://github.com/Cristiantxb/teste-api-ebac.git'
             }
         }
 
-    
-        stage('Instalar dependencias') {
-             
+        stage('Instalar dependências e Executar testes') {
             steps {
-                nodejs('node'){
+                // Navega para o diretório correto no Windows
+                dir('Exercicio 12/testes-e2e-ebac-shop') {
+                    // Instala as dependências
                     bat 'npm install'
-                            }
-                    }
-        }
-    
-        stage('Executar Testes') {
-            steps {
-                 nodejs('node'){
+
+                    // Executa os testes
                     bat 'npx cypress run'
                 }
-                        }
+            }
         }
-}
-    
-    
+    }
 }
