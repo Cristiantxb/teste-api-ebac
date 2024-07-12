@@ -14,8 +14,7 @@ pipeline {
         }
         stage('Executar Testes') {
             steps {
-                sh 'NO_COLOR=1
-                npm run cy: run'
+                sh 'npm run cy: run'
             }
         }
     }
