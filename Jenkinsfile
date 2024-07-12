@@ -9,12 +9,12 @@ pipeline {
         }
         stage('Instalar dependências') {
             steps {
-                sh 'npm install'
+                bat 'npm install -f'
             }
         }
         stage('Executar Testes') {
             steps {
-                sh 'NO_COLOR=1
+                bat 'NO_COLOR=1
                 npm run cy: run'
             }
         }
