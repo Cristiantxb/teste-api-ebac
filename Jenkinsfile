@@ -14,7 +14,8 @@ pipeline {
         }
         stage('Executar Testes') {
             steps {
-                bat 'npx cypress run'
+                bat 'NO_COLOR=1
+                npx cypress run'
             }
         }
     }
